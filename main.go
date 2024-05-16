@@ -1,12 +1,7 @@
-// SPDX-FileCopyrightText: 2023 The Pion community <https://pion.ly>
-// SPDX-License-Identifier: MIT
-
-// Package main implements a TURN client using UDP
 package main
 
 import (
 	"crypto/rand"
-	"flag"
 	"fmt"
 	"log"
 	"net"
@@ -21,8 +16,6 @@ func main() {
 	user := "{add username}"
 	credential := "{add credential}"
 	realm := "turn.cloudflare.com"
-
-	flag.Parse()
 
 	udpConn, err := net.ListenPacket("udp4", "0.0.0.0:0")
 	if err != nil {
